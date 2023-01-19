@@ -32,7 +32,7 @@ jobs:
           name: smoke test
           command: |
             URL="https://blog.udacity.com"
-            if cur -s --head ${URL}
+            if curl -s --head ${URL}
             then
               return 0
             else
