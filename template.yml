@@ -4,7 +4,7 @@ Resources:
     Properties:
       SecurityGroups:
         - !Ref InstanceSecurityGroup
-      KeyName: udacity
+      KeyName: AWS_IAC
       ImageId: 'ami-00874d747dde814fa'
   InstanceSecurityGroup:
     Type: 'AWS::EC2::SecurityGroup'
