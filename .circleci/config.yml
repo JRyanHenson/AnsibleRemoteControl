@@ -32,7 +32,7 @@ jobs:
               --region us-east-1
   configure_infrastructure: 
     docker:
-      - image: python:3.7-alpine3.11
+      - image: amazon/aws-cli
     steps:
       - checkout
       - add_ssh_keys:
@@ -61,5 +61,5 @@ workflows:
   configure_infrastructure_workflow:
     jobs:
       #- configure_infrastructure
-      # create_infrastructure
+      - create_infrastructure
       - smoke-test
